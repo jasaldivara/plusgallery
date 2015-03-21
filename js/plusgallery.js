@@ -89,9 +89,9 @@ SLIDEFADE
         pg.getDataAttr();
         
         pg.writeHTML();
-        if(pg.albumId !== null
-          || pg.type == 'instagram'
-          || (pg.type == 'local' && !pg.imageData.hasOwnProperty('albums'))){
+        if(pg.albumId || 
+        pg.type == 'instagram' || 
+        (pg.type == 'local' && !pg.imageData.hasOwnProperty('albums'))){
           //load single Album
           pg.loadSingleAlbum();
         }
